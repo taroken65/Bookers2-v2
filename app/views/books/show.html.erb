@@ -4,12 +4,12 @@
      </p>
  <% end %>
  
-<% if @book_comment.errors.any? %>
-  <% @book_comment.errors.full_messages.each do |message| %>
+  <% if @book_comment.errors.any? %>
+     <% @book_comment.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
-
+ 
 <div class="container pt-3">
  <div class="row">
   <div class="col-md-3">
@@ -81,7 +81,7 @@
      <%= form_with(model:[@book, @book_comment], local: true) do |f| %>
      <%= f.text_area :comment, class: 'w-100' %>
      <%= f.submit "送信" %>
-     <% end %>
+         <% end %>
     </div>
   
   </div>
