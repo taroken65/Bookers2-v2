@@ -7,7 +7,7 @@ class BookCommentsController < ApplicationController
   @book_comment.user_id = current_user.id
   @book_comment.book_id = @book.id
   if @book_comment.save
-  redirect_to book_path(book.id)
+  redirect_to book_path(@book.id)
   else
    @book_comments = @book.book_comments
    render "books/show"
